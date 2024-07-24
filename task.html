@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+// Write a program to print the reverse of a number
+// input: 218
+// output: 812
+// input:-210
+// output: -12
+// code:-
+var a = +prompt("enter a number ")
+var b = String(a).split("")
+if(b[0] == "-")
+{
+ app = Number(a) * (-1)
+ c = 0
+ while(app > 0)
+ {
+ rem = temp%10;
+ sum = (c * 10) + rem
+ app = Math.floor(app/10)
+ }
+ console.log("-" +c)
+}
+else
+{
+ c = 0
+ while(a> 0)
+ {
+ rem = a%10;
+ sum = (c * 10) + rem
+ a = Math.floor(a/10)
+ }
+ console.log(c)
+}
+
+// 2) Write a program to print min,max and followed by rest of the numbers
+// input: 13675
+// output: 17365
+// code:-
+b = prompt("enter a number: ").split("")
+for(i = 0;i<b.length;i++)
+{
+ for(j =i+1;j<b.length;j++)
+ {
+ if(b[i] > b[j])
+ {
+ jas = b[j]
+ b[j] = b[i]
+ b[i] = jas
+ }
+ }
+}
+min = b[0]
+max = b[a.length-1]
+j = b.slice(1,b.length-1)
+var jas = ""
+for(i of j)
+{
+ jas = jas+i
+}
+console.log(min + ""+ max+ "" + jas);
+
+// 3) Write a program to check whether a number is palindrome or not.
+// input: 121
+// output: 121 is palindrome
+// input: 467
+// output: 467 is not a palindrome
+// code:-
+num = +prompt("enter a number: ")
+dupli = num
+palin = 0
+while(num>0)
+{
+last_value = num % 10;
+palin = (palin*10)+ last_value;
+num = Math.floor(num/10)
+}
+if (palin == dupli)
+{
+ console.log( dupli + " : is palind")
+}
+else
+{
+ console.log( dupli + " : is not a palind")
+}
+
+        </script>
+</body>
+</html>
